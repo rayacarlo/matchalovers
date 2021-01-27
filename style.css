@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eee;
+}
+a {
+    color: #1D1929;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+/* Navigation */
+.nav-main {
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 20px 142px;
+}
+.nav-logo {
+    width: 160px;
+}
+.nav-main ul {
+    display: flex;
+}
+.nav-main ul li {
+    padding: 10px;
+}
+.nav-main ul li a{
+    padding: 2px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+.nav-main ul li a:hover {
+    border-bottom: 8px solid #5CFF85;
+}
+.nav-main ul.nav-links {
+    display: flex;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    height: 715px;
+    background: #1D1929;
+    background-image: url(img/hero-background.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 142px;
+}
+.hero h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 64px;
+    color: #fff;
+    margin: 20px 0;
+}
+.hero p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #E2FFE9;
+    margin: 20px 0;
+}
+.hero-btn a{
+    margin: 40px 20px;
+}
+.btn-solid {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 20px;
+    color: #1D1929;
+    background-color: #5CFF85;
+}
+.btn-ghost {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 20px;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn-solid:hover {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 20px;
+    color: #1D1929;
+    background-color: #26D953;
+}
+.btn-ghost:hover {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 20px;
+    color: #5CFF85;
+    border: 2px solid #5CFF85;
+}
+
+.section-1 {
+    width: 100%;
+    height: 600px;
+    background-image: url(img/section-1-background.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: top center;
+}
