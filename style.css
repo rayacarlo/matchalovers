@@ -115,7 +115,8 @@ ul {
     font-weight: 700;
     padding: 18px 20px;
     color: #1D1929;
-    background-color: #26D953;
+    color: #26D953;
+    background:#fff;
 }
 .btn-ghost:hover {
     cursor: pointer;
@@ -129,6 +130,7 @@ ul {
     border: 2px solid #5CFF85;
 }
 
+/* Section 1  */
 .section-1 {
     width: 100%;
     height: 600px;
@@ -136,4 +138,219 @@ ul {
     background-repeat: no-repeat;
     background-size: initial;
     background-position: top center;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 142px;
+    padding: 60px 0;
+}
+.wrapper-text {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wrapper-text h2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #1D1929;
+    text-align: left;
+    margin-bottom: 12px;
+}
+.wrapper-text p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1D1929;
+    text-align: left;
+    margin-top: 12px;
+}
+.wrapper-img img {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+/* Section 3  */
+.section-3 {
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    padding: 120px 0;
+}
+.section-3 h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #1D1929;
+    text-align: center;
+    margin: 48px 0;
+}
+.icon-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin: 12px 0;
+}
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.icon-item img {
+    width: 120px;
+    height: 120px;
+}
+.icon-item h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1D1929;
+    text-align: center;
+    margin: 12px 0;
+}
+.icon-item p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1D1929;
+    text-align: center;
+}
+
+/* Section 4  */
+.section-4 {
+    width: 100%;
+    height: 1800px;
+    margin: auto;
+    background-image: url(img/section-4-background.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: top center;
+}
+.section-4 h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: #1D1929;
+    text-align: center;
+    margin-top: 180px;
+}
+.card-list {
+    width: 65%;
+    margin: 160px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.card-item {
+    background: #fff;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    opacity:0.5;
+}
+.card-item:hover {
+    background: #fff;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity:1;
+    cursor: pointer;
+}
+.card-item h4 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1D1929;
+    text-align: center;
+    padding: 60px 32px;
+}
+.section-4 .card-btn {
+    display: flex;
+    justify-content: center;
+}
+/* Animations  */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.animated:hover {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes tada {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+}
+
+30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+}
+
+40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+}
+
+100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+}
+@keyframes tada {
+0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    -ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+}
+
+30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+}
+
+40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+}
+
+100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+}
+.tada {
+-webkit-animation-name: tada;
+animation-name: tada;
 }
