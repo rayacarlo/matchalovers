@@ -1,194 +1,201 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body {
-    font-family: "Rubik", sans-serif;
-    background-color: #fff;
+
+html {
     font-size: 16px;
 }
+
+body {
+    --primary-font: "Rubik", sans-serif;
+    --secondary-font: "Nunito Sans", sans-serif;
+    --primary-color: #5CFF85;
+    --primary-color-light: #E2FFE9;
+    --secondary-color: #1D1929;
+    --neutral-white: #fff;
+    background: var(--neutral-white);
+}
+
 a {
-    color: #1D1929;
+    color: var(--secondary-color);
     text-decoration: none;
 }
+
 ul {
     list-style: none;
 }
+
+/* Container  */
 .container {
     width: 100%;
+    max-width: 1440px;
     margin: auto;
-    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:    "nav nav nav"
+                            "hero hero hero"
+                            "section-1 section-1 section-1"
+                            "section-2 section-2 section-2"
+                            "section-3 section-3 section-3"
+                            "section-4 section-4 section-4"
+                            "footer footer footer";
 }
 
 /* Navigation */
-.nav-main {
+.nav {
+    grid-area: nav;
+    background: var(--neutral-white);
+    font-family: var(--primary-font);
     font-size: 1rem;
+    color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
-    padding: 20px 0;
+    padding: 0 5em;
+    height: 5em;
 }
-.nav-logo {
-    width: 160px;
-    margin-left: 142px;
-}
-.nav-main .btn-solid {
-    margin-right: 142px;
-}
-.nav-main ul {
+.nav-links {
     display: flex;
 }
-.nav-main ul li {
-    padding: 10px;
-}
-.nav-main ul li a{
-    padding: 2px;
+.nav-links a {
+    padding: 0.25em;
+    margin: 0 0.75em;
     font-size: 1rem;
     font-weight: 500;
 }
-.nav-main ul li a:hover {
-    border-bottom: 8px solid #5CFF85;
-}
-.nav-main ul.nav-links {
-    display: flex;
+.nav-links a:hover {
+    border-bottom: 0.5em solid var(--primary-color);
 }
 
 /* Hero */
 .hero {
-    width: 100%;
-    height: 715px;
-    background: #1D1929;
+    grid-area: hero;
+    background: var(--secondary-color);
     background-image: url(img/hero-background.svg);
     background-repeat: no-repeat;
-    background-size: initial;
-    background-position: center cover;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 142px;
-    color: #fff;
+    padding: 10em 0;
 }
 .hero h1 {
-    font-size: 3rem;
+    font-family: var(--primary-font);
+    font-size: 2.75rem;
     font-weight: 700;
-    margin: 20px 0;
+    color: var(--neutral-white);
+    padding: 0.25em;
 }
 .hero p {
+    font-family: var(--secondary-font);
     font-size: 1.5rem;
     font-weight: 400;
-    color: #E2FFE9;
-    margin: 20px 0;
+    color: var(--primary-color-light);
+    padding: 0.25em;
 }
 .hero-btn a {
-    margin: 40px 20px;
+    margin: 1em 0.75em;
 }
 .btn-solid {
     cursor: pointer;
     display: inline-block;
-    border: 0;
+    font-family: var(--primary-font);
     font-size: 1rem;
     font-weight: 700;
-    padding: 18px 20px;
-    color: #1D1929;
-    background-color: #5CFF85;
+    padding: 1.1em 1em;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 .btn-ghost {
     cursor: pointer;
     display: inline-block;
-    border: 0;
+    font-family: var(--primary-font);
     font-size: 1rem;
     font-weight: 700;
-    padding: 16px 20px;
-    color: #fff;
-    border: 2px solid #fff;
+    padding: 1em 1em;
+    color: var(--neutral-white);
+    border: 2px solid var(--neutral-white);
 }
 .btn-solid:hover {
-    cursor: pointer;
-    display: inline-block;
-    border: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 18px 20px;
-    color: #1D1929;
-    color: #26D953;
-    background:#fff;
+    color: var(--primary-color);
+    background: var(--neutral-white);
 }
 .btn-ghost:hover {
-    cursor: pointer;
-    display: inline-block;
-    border: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 16px 20px;
-    color: #5CFF85;
-    border: 2px solid #5CFF85;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 /* Section 1  */
 .section-1 {
+    grid-area: section-1;
     width: 100%;
-    height: 600px;
+    height: 40rem;
+    padding: 5em;
+    margin: auto;
     background-image: url(img/section-1-background.svg);
     background-repeat: no-repeat;
-    background-size: initial;
-    background-position: top center;
+    background-size: cover;
+    background-position: center;
 }
 .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 142px;
-    padding: 60px 0;
+    margin: 0 5em;
 }
 .wrapper-text {
-    width: 400px;
+    width: 25em;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .wrapper-text h2{
+    font-family: var(--primary-font);
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1D1929;
+    color: var(--secondary-color);
     text-align: left;
-    margin-bottom: 12px;
+    margin-bottom: 0.75em;
 }
 .wrapper-text p {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: var(--secondary-font);
     font-size: 1rem;
     font-weight: 400;
-    color: #1D1929;
+    color: var(--secondary-color);
     text-align: left;
-    margin-top: 12px;
+    margin-top: 0.75em;
 }
 .wrapper-img img {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
+    max-width: 100%;
+    height: auto;
 }
+
 /* Section 2  */
 .section-2 {
-    width: 80%;
-    height: 480px;
+    grid-area: section-2;
+    width: 100%;
+    height: 24em;
+    padding: 6em;
     margin: auto;
-    padding: 40px 0;
 }
 .section-2 h2 {
-    font-size: 2.5rem;
+    font-family: var(--primary-font);
+    font-size: 2rem;
     font-weight: 700;
-    color: #1D1929;
+    color: var(--secondary-color);
     text-align: center;
-    margin: 48px 0;
 }
 .icon-list {
     display: grid;
+    padding: 2em;
     grid-template-columns: repeat(5, 1fr);
-    gap: 24px;
-    margin: 12px 0;
+    grid-gap: 0.5em;
+    grid-column: 1 / 4;
 }
 .icon-item {
     display: flex;
@@ -198,18 +205,19 @@ ul {
     text-align: center;
 }
 .icon-item img {
-    width: 120px;
-    height: 120px;
+    max-width: 100%;
+    height: auto;
 }
 .icon-item h3 {
+    font-family: var(--primary-font);
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1D1929;
+    color: var(--secondary-color);
     text-align: center;
-    margin: 12px 0;
+    margin: auto;
 }
 .icon-item p {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: var(--secondary-font);
     font-size: 1rem;
     font-weight: 400;
     color: #1D1929;
@@ -218,58 +226,55 @@ ul {
 
 /* Section 3  */
 .section-3 {
+    grid-area: section-3;
     width: 100%;
-    height: 1800px;
+    height: 120em;
     margin: auto;
     background-image: url(img/section-4-background.svg);
     background-repeat: no-repeat;
-    background-size: initial;
-    background-position: top center;
+    background-size: cover;
+    background-position: center;
 }
 .section-3 h2 {
+    font-family: var(--primary-font);
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1D1929;
+    color: var(--secondary-color);
     text-align: center;
-    padding-top: 180px;
+    padding-top: 5em;
 }
 .card-list {
-    width: 75%;
-    margin: 80px auto;
+    margin: 5em auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(3, 20em);
+    grid-gap: 2.5em;
+    justify-content: center;
 }
 .card-item {
+    overflow: hidden;
     background: #fff;
-    width: 290px;
+    width: 18em;
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-self: center;
     text-align: center;
-    opacity:0.5;
+    opacity: 0.5;
 }
 .card-item:hover {
-    background: #fff;
-    width: 290px;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-self: center;
-    text-align: center;
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-    opacity:1;
+    opacity: 1;
     cursor: pointer;
 }
 .card-item h4 {
+    font-family: var(--primary-font);
     font-size: 1rem;
     font-weight: 700;
-    color: #1D1929;
+    color: var(--secondary-color);
     text-align: center;
-    padding: 60px 32px;
+    padding: 3.75em 2em;
 }
 .section-3 .card-btn {
     display: flex;
@@ -278,65 +283,83 @@ ul {
 
 /* Section 4  */
 .section-4 {
+    grid-area: section-4;
     width: 100%;
-    height: 880px;
+    height: 50em;
     margin: auto;
 }
 .section-4 h2 {
-    font-size: 2.5rem;
+    font-family: var(--primary-font);
+    font-size: 2rem;
     font-weight: 700;
-    color: #1D1929;
+    color: var(--secondary-color);
     text-align: center;
-    margin: 80px 0;
+    padding-top: 2em;
 }
 .recipe-wrapper {
+    padding: 2em 5em;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin: 40px 142px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:    "img-wrapper table-wrapper table-wrapper";
 }
 .img-wrapper {
+    grid-area: img-wrapper;
     margin: auto;
 }
-.table-wrapper table {
-    width: 100%;
-    padding-left: 60px;
+.img-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+.table-wrapper {
+    grid-area: table-wrapper;
+    padding: 2em;
 }
 .table-wrapper .index{
+    font-family: var(--primary-font);
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1D1929;
+    color: var(--secondary-color);
 }
 .table-wrapper .index:hover{
-    font-size: 44px;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #1D1929;
-    border-bottom: 8px solid #5CFF85;
+    color: var(--secondary-color);
+    border-bottom: 8px solid var(--primary-color)
 }
 .table-wrapper .description {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: var(--secondary-font);
     font-size: 1rem;
     font-weight: 400;
-    color: #1D1929;
-    padding: 20px 24px;
+    color: var(--secondary-color);
+    padding: 1.25em 1.5em;
 }
 .section-4 .recipe-btn {
     display: flex;
     justify-content: center;
 }
 .section-4 .recipe-btn .btn-solid{
-    margin: 40px;
+    margin: 2em;
 }
 
 /* Social  */
+.footer {
+    grid-area: footer;
+    width: 100%;
+    height: 20em;
+    background-image: url(img/footer-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
 .social {
-    margin: 24px;
+    padding-top: 10em;
 }
 .social h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1D1929;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--neutral-white);
     text-align: center;
-    margin: 20px 0;
 }
 .links {
     display: flex;
@@ -344,18 +367,199 @@ ul {
     justify-content: center;
 }
 .links a {
-    margin: 12px 28px;
+    margin: 1.5em;
 }
 .links a i {
-    font-size: 3rem;
+    font-size: 2rem;
+    color: var(--neutral-white);
 }
 .links a i:hover {
-    font-size: 2.5rem;
-    color: #5CFF85;
+    font-size: 1.75rem;
+    color: var(--primary-color)
 }
 
 /* Responsive  */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+    }
+    .wrapper-text {
+        width: 32em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .wrapper-text h2{
+        text-align: center;
+        margin-bottom: 0.75em;
+    }
+    .wrapper-img {
+        margin: auto;
+        width: 75%;
+    }
+    .section-2 {
+        height: 26em;
+        padding-top: 6em;
+    }
+    .icon-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.75em;
+        padding: 4em;
+    }
+    .icon-item img {
+        width: 45%;
+    }
+    .icon-item p {
+        display: none;
+    }
+    .section-3 {
+        height: 100em;
+    }
+    .section-3 h2 {
+        font-size: 1.75rem;
+        padding-top: 6em;
+    }
+    .card-list {
+        margin: 4em auto;
+        grid-template-columns: repeat(3, 16em);
+        grid-gap: 0.5em;
+    }
+    .card-item {
+        width: 15em;
+    }
+    .section-4 {
+        height: 52em;
+    }
+    .section-4 h2 {
+        font-size: 1.75rem;
+        padding-top: 1.75em;
+    }
+    .recipe-wrapper {
+        padding: 1em 4em;
+    }
+    .table-wrapper {
+        grid-area: table-wrapper;
+        padding: 1.5em;
+    }
+    .table-wrapper .index{
+        font-size: 2rem;
+    }
+    .table-wrapper .index:hover{
+        font-size: 2rem;
+    }
+    .table-wrapper .description {
+        padding: 1em 1.25em;
+    }
+    .section-4 .recipe-btn .btn-solid{
+        margin: 2em;
+    }
+}
 
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 12px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+    }
+    .wrapper-text {
+        width: 24em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .wrapper-text h2{
+        text-align: center;
+        margin-bottom: 0.75em;
+    }
+    .wrapper-img {
+        margin: auto;
+        width: 75%;
+    }
+    .section-2 {
+        height: 36em;
+        padding-top: 4em;
+    }
+    .icon-list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0.75em;
+        padding: 2em;
+    }
+    .icon-item img {
+        width: 30%;
+    }
+    .icon-item p {
+        display: none;
+    }
+    .section-3 {
+        height: 240em;
+    }
+    .section-3 h2 {
+        font-size: 1.5rem;
+        padding-top: 14em;
+    }
+    .card-list {
+        margin: 4em auto;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0.75em;
+    }
+    .card-item {
+        width: 16em;
+    }
+    .section-4 {
+        height: 52em;
+    }
+    .section-4 h2 {
+        font-size: 1.25rem;
+        padding-top: 1.75em;
+    }
+    .recipe-wrapper {
+        padding: 2em 5em;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:    "table-wrapper";
+    }
+    .img-wrapper img {
+        display: none
+    }
+    .table-wrapper {
+        grid-area: table-wrapper;
+        padding: 2em;
+    }
+    .recipe-wrapper {
+        padding: 1em 2em;
+    }
+    .table-wrapper {
+        grid-area: table-wrapper;
+        padding: 1.5em;
+    }
+    .table-wrapper .index{
+        font-size: 2rem;
+    }
+    .table-wrapper .index:hover{
+        font-size: 2rem;
+    }
+    .table-wrapper .description {
+        padding: 1em 1.25em;
+    }
+    .section-4 .recipe-btn .btn-solid{
+        margin: 2em;
+    }
+}
 
 /* Animations  */
 .animated {
